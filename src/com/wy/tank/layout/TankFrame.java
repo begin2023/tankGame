@@ -9,6 +9,7 @@ public class TankFrame extends JFrame {
         TankPanel panel = new TankPanel();
         this.setSize(1200, 900);
         this.add(panel);
+        this.addKeyListener(panel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }

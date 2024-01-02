@@ -1,12 +1,17 @@
 package com.wy.tank.element;
 
+import com.wy.tank.enums.Direction;
+
 public abstract class Tank {
     private int x;
     private int y;
 
-    public Tank(int x, int y) {
+    private Direction direction = Direction.UP;
+
+    public Tank(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
+        this.direction = direction;
     }
 
     public int getX() {
@@ -23,5 +28,13 @@ public abstract class Tank {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }
